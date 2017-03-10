@@ -1,0 +1,29 @@
+# Site settings
+# title: Mimo Stask
+title: Mimo Stask
+email: mimo@github.io
+author: "Mimo Stask"
+description: > 
+  Jekyll page abou Mimo Stask, It's task from school.
+baseurl: ""
+url: "https://mimostask.github.io/"
+image_base: /assets/images/
+github_username: MimoStask
+github_page: "https://mimostask.github.io/"
+
+
+# Build settings
+markdown: kramdown
+markdown_ext:  markdown,mkdown,mkdn,mkd,md
+
+
+permalink: /blog/:year/:month/:day/:title
+excerpt_separator: <!--more-->
+
+gems:
+    - jekyll-email-protect
+    - jekyll-sitemap
+
+collections:
+    wepubs:
+      output: true

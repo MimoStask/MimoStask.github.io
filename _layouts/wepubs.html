@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<div class="wepub">
+
+  <header class="wepub-header">
+  	<img class="wepub-image" src="{{ site.image_base }}{% if page.image_path %}{{ page.image_path }}{% else %}unknown.png{% endif %}" alt="Page image" />
+    <h1 class="wepub-title">
+    	{{ page.title }}
+    </h1>
+  </header>
+
+  <article class="wepub-content">
+    {{ content }}
+  </article>
+
+</div>

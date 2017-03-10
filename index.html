@@ -1,0 +1,37 @@
+---
+layout: default
+
+---
+
+<div class="home">
+  <header class="post-header">
+     <h1 class="post-title">Vitajte</h1>
+  </header>
+  <p>
+    Vitajte na stránke o mne. Môžete sa tu dozvedieť mnoho užitočných vecí ale aj veľa zbytočností. Napríklad
+  </p>
+	<p>
+	  	<h2 class="home-title">Informácie 
+	  	<a class="home-link" href="/about/">o mne</a>
+	  	</h2>
+	  	
+	</p>
+ 	<p>
+	  	<h2 class="home-title">Posledný príspevok na blogu:</h2>
+	  	{% assign post = site.posts.first %}
+
+	  	<span class="post-meta">{{ post.date | date_to_string }}</span>
+	    <a class="home-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+	</p>	
+
+	<p>
+	  	<h2 class="home-title">Prípadne mi rovno  
+	  	<a class="home-link" href="mailto:{{ site.email | encode_email }}">napíšte</a>.
+	  	</h2>
+	  	
+	</p>
+
+
+</div>
+
+

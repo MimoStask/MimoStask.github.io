@@ -1,0 +1,20 @@
+---
+layout: post
+title: "Voľný čas"
+date: 2017-03-03
+categories:
+---
+
+Pekné fotky.
+<!--more-->
+
+Občas ma popadne nálada fotiť ale väčšinou je to len tak s mobilom tak tomu prislúcha aj kvalita. Ale nie, vyhováram sa. Veď sa pozrite sami. 
+
+<ul class="photo-gallery">
+{% for photo in site.data.selectedPhotos %}
+  <li>
+   		<img src="{{ site.image_base }}{{ photo.image_path }}" alt="{{ photo.title}}" />
+  </li>
+{% endfor %}
+</ul>
+
