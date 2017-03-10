@@ -1,0 +1,27 @@
+---
+layout: post
+title: "Aplikácia podporujúca šetrenie energie v domácnosti 2"
+date: 2017-03-10
+categories:
+---
+V predošlom príspevku som predstavil tému mojej bakalárky. Tu sa budem venovať viac technickým veciam.
+<!--more-->
+
+Rozhodli sme sa vytvoriť ju ako webovú aplikáciu. Na jej programovanie používam framework Laravel a na vzhľad Bootstrap. Na Bootstrape sa mi páči jeho jednoduchá syntax a aj celá myšlienka stĺpcov, vďaka ktorej je stránka responzívna
+
+
+{% highlight php %}
+
+@extends('layouts.master')
+
+@section('content')
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            
+        </div>
+    </div>
+</div>
+@endsection
+{% endhighlight %}
+Ďalšiu funkcionalitu popíšem v nasledujúcich príspevkoch.
