@@ -3,14 +3,14 @@
     <nav class="site-nav">
 
       <div class="site-left">
-        <a class="page-link" href="{{ site.baseurl  | absolute_url }}/">Domov</a>
+        <a class="page-link" href="{{ site.baseurl  | prepend: site.baseurl }}/">Domov</a>
 
       </div>
 
       <div class="site-right">
         {% for page in site.pages %}
           {% if page.title %}
-          <a class="page-link" href="{{ page.url | absolute_url }}">{{page.title}}</a>
+          <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{page.title}}</a>
           {% endif %}
         {% endfor %}
 
@@ -20,6 +20,6 @@
     </nav>
 
     <h1>
-      <a class="site-title" href="{{ site.baseurl  | absolute_url }}/">{{ site.title }}</a>
+      <a class="site-title" href="{{ site.baseurl  | prepend: site.baseurl }}/">{{ site.title }}</a>
     </h1>
 </div>

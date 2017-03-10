@@ -11,6 +11,3 @@ Témov mojej bakalárky je aplikácia, ktorá má pomôcť bežným ľuďom vyzn
 Ľudia často nerozumejú za čo majú platiť a nechce sa im stráviť celý deň hľadním čo ide komu do vrecka. Ale to je len zlomok, čo bude moja aplikácia poskytovať. Používateľ si bude môcť na zákalde jeho ročnej spotreby porovnať, koľko by platil u iných dodávateľov elektriny a teda si aj zvážiť, či nie je niektorý z nich výhodnejší. 
 
 Ďalšiu funkcionalitu popíšem v nasledujúcich príspevkoch.
-
-
-{{page.slug}}
