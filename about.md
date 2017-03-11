@@ -14,8 +14,8 @@ permalink: /about/
 
 * C
 * JAVA
-* HTML, CSS, JS, PHP
-* Bootstrap, Laravel
+* HTML, CSS (Bootstrap), JS
+* PHP (Laravel)
 * Postgres, MySQL
 * UML 2.0
 * GIT
