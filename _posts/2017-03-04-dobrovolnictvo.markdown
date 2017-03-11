@@ -9,7 +9,7 @@ Vo voľnom čase pôsobím ako dobrovoľník v saleziánskom stredisku na Mamate
 
 <!--more-->
 
-Organizujeme stretká, tábory, výlety a veľa ďalších aktivít. Ja so spoluanimátorom máme nastatosti stretko Žraloci. V lete tábory a akurát tento víkend ideme plánovať tohtoročný tábor. Držte nám palce nech niečo dobre vymyslíme. 
+Organizujeme stretká, tábory, výlety a veľa ďalších aktivít. Ja so spoluanimátorom máme na starosti stretko Žraloci. V lete tábory a akurát tento víkend ideme plánovať tohtoročný tábor. Držte nám palce nech niečo dobre vymyslíme. 
 
 
 <ul class="photo-gallery">

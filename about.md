@@ -8,7 +8,7 @@ permalink: /about/
 <img class="about-foto"  src="/assets/images/me.JPG" alt="my portrait" />
 
 
-Studujem na FIIT STU v BA. Som v 3. ročníku bakalárskeho štúdia. Na škole sme prešli veľa vecí a najviac z nich ma baví programovanie a softvérové inžinierstvo.
+Študujem na FIIT STU v BA. Som v 3. ročníku bakalárskeho štúdia. Na škole sme prešli veľa vecí a najviac z nich ma baví programovanie a softvérové inžinierstvo.
 
 ### Jazyky, čo aspoň trochu ovládam:
 

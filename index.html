@@ -5,33 +5,30 @@ layout: default
 
 <div class="home">
   <header class="post-header">
-     <h1 class="post-title">Vitajte</h1>
+     <h1 >Vitajte</h1>
   </header>
-  <p>
-    Vitajte na stránke o mne. Môžete sa tu dozvedieť mnoho užitočných vecí ale aj veľa zbytočností. Napríklad
-  </p>
+  <h3>
+    Vitajte na stránke o mne. Môžete sa tu dozvedieť mnoho užitočných vecí. Napríklad: 
+  </h3>
+
 	<p>
 	  	<h2 class="home-title">Informácie 
 	  	<a class="home-link" href="/about/">o mne</a>
 	  	</h2>
 	  	
 	</p>
+	<hr>
  	<p>
-	  	<h2 class="home-title">Posledný príspevok z blogu:</h2>
-	  	{% assign post = site.posts.first %}
-
-	  	<span class="post-meta">{{ post.date | date_to_string }}</span>
-	    <a class="home-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-	</p>	
-
-	<p>
-	  	<h2 class="home-title">Prípadne mi rovno  
-	  	<a class="home-link" href="mailto:{{ site.email | encode_email }}">napíšte</a>.
+ 		{% assign post = site.posts.first %}
+	  	<h2 class="home-title">Posledný príspevok z blogu:  <a class="home-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> <span class="post-meta">{{ post.date | date_to_string }}</span>
 	  	</h2>
-	  	
+	</p>	
+	<hr>
+	<p>
+	  	<h2 class="home-title">Prípadne ma môžete rovno   
+	  	<a class="home-link" href="mailto:{{ site.email | encode_email }}">kontaktovať</a>.
+	  	</h2>
 	</p>
-
-
 </div>
 
 

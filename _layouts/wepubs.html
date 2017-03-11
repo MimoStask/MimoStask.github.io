@@ -4,7 +4,11 @@ layout: default
 <div class="wepub">
 
   <header class="wepub-header">
-  	<img class="wepub-image" src="{{ site.image_base }}{% if page.image_path %}{{ page.image_path }}{% else %}unknown.png{% endif %}" alt="Page image" />
+  {% if page.image_path %}
+    <img class="wepub-image" src="{{ site.image_base }}{{ page.image_path }}" alt="Page image" />
+  {% else %}
+    <i class="fa fa-question-circle-o fa-3x" ></i>
+  {% endif %}
     <h1 class="wepub-title">
     	{{ page.title }}
     </h1>

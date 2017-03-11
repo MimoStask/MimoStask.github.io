@@ -3,7 +3,7 @@ layout: page
 title: WPub
 permalink: /wpub/
 ---
-Môžete sa tu dozvedieť detaili o zadaniach z predmetu Webové publikovanie.  Čo bolo zámerom a ako som ich vypracoval.
+Môžete sa tu dozvedieť detaily o zadaniach z predmetu Webové publikovanie.  Čo bolo zámerom a ako som ich vypracoval.
 
 <ul class="wepub-headers">
 	{% for wepub in site.wepubs %}
