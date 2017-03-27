@@ -8,12 +8,12 @@ image_path:
 
 
 * ### členenie textu,
-	* text je členený na kapitoli a podkapitoli... Obsahuje prílohu, obsah, zoznam obrázkov a tabuliek.  	
+	* text je členený na kapitoly a podkapitoly... Obsahuje prílohu, obsah, zoznam obrázkov a tabuliek.  	
 * ### zvýraznenie slov, zvýraznenie členenia textu odrážkami alebo číslovaním,
-	* kurzíva je použitá na strane 17-18, na zvýraznenie názvov častí faktúri.
+	* kurzíva je použitá na strane 17-18, na zvýraznenie názvov častí faktúry.
 	* odrážky na stranách 17, 19
 * ### odkazy na iné časti vlastného dokumentu,
-	* V úvode sú odkazi na časti dokumentu napríklad: V prvej časti, položky faktúry, prehľad systémov
+	* V úvode sú odkazy na časti dokumentu napríklad: V prvej časti, položky faktúry, prehľad systémov
 * ### zoznam použitej literatúry a zdrojov vrátane ich citácie v texte,
 	* citácia v texte je tvorená pomocou odkazov na id zdrojov napríklad
 	{% highlight xml %}
