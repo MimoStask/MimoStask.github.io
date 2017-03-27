@@ -29,14 +29,13 @@ image_path:
 * ### vytvorenie registra pojmov
 	* na vytvorenie registra pojmov je použitý IndexTerm
 * ### ďalšie úpravy xsl
-	* v atribúte normal.para.spacing sme pridali riadok 
+	* v atribúte normal.para.spacing sme pridali riadok pre zväčšenie riadkovania na 1,5em
 		{% highlight xsl %}
-			<xsl:attribute name="line-height">1.5em</xsl:attribute>
+<xsl:attribute name="line-height">1.5em</xsl:attribute>
 		{% endhighlight %}
-	pre zväčšenie riadkovania na 1,5em
 	* odstránili sme načítavanie nedostupného dokumentu "kizik.pdf" 
 	{% highlight xsl %}
-	<fo:block xmlns:fo="http://www.w3.org/1999/XSL/Format" space-before="12pt" space-after="1cm" text-align="center">
-	      <fo:external-graphic src="url(kizi.pdf)" width="2cm" content-width="scale-to-fit"/>
-	    </fo:block>
+<fo:block xmlns:fo="http://www.w3.org/1999/XSL/Format" space-before="12pt" space-after="1cm" text-align="center">
+    <fo:external-graphic src="url(kizi.pdf)" width="2cm" content-width="scale-to-fit"/>
+</fo:block>
 	{% endhighlight %}
