@@ -21,21 +21,21 @@ image_path:
 	{% endhighlight %}
 * ### vloženie obrázku a tabuliek, odkazy na ne v texte; zoznam obrázkov a tabuliek v úvode alebo závere textu,
 	* pre vytvorenie zoznamu obrázkov a tabuliek bolo nutné upraviť nasledujúcu časť kódu v thesis.xsl
-	{% highlight xsl %}
-		<xsl:param name="generate.toc">
-			book      title,toc,figures,tables
-		</xsl:param>	
+	{% highlight xml %}
+	<xsl:param name="generate.toc">
+		book      title,toc,figures,tables
+	</xsl:param>	
 	{% endhighlight %}
 * ### vytvorenie registra pojmov
 	* na vytvorenie registra pojmov je použitý IndexTerm
 * ### ďalšie úpravy xsl
 	* v atribúte normal.para.spacing sme pridali riadok pre zväčšenie riadkovania na 1,5em
-		{% highlight xsl %}
-<xsl:attribute name="line-height">1.5em</xsl:attribute>
+	{% highlight xml %}
+	<xsl:attribute name="line-height">1.5em</xsl:attribute>
 		{% endhighlight %}
-	* odstránili sme načítavanie nedostupného dokumentu "kizik.pdf" 
-	{% highlight xsl %}
+* odstránili sme načítavanie nedostupného dokumentu "kizik.pdf" 
+{% highlight xml %}
 <fo:block xmlns:fo="http://www.w3.org/1999/XSL/Format" space-before="12pt" space-after="1cm" text-align="center">
     <fo:external-graphic src="url(kizi.pdf)" width="2cm" content-width="scale-to-fit"/>
 </fo:block>
-	{% endhighlight %}
+{% endhighlight %}
