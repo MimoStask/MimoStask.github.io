@@ -42,7 +42,7 @@ image_path:
 		
 		
 		
-		* ##### presentation 
+	* ##### presentation 
 			* je koreňový element prezentácie. Obsahuje názov prezentácie **headline** a aj podnadpis **subHeadline**. Ďalej obsahuje podrobnejšie informácie o prezentácii a slajdy.
 		* ##### info
 			* obsahuje **author**, ktorý obsahuje meno a priezvisko autora. Autorov môže byť maximálne 4. Odporúča sa pri väčšom počte autorov ako štvrtého uviesť **a kolektív**. Obsahuje **place**, tam môže používateľ zadať miesto konanie sa prezentácie. Má aj atribút hovoriaci o dátume prezentácie. Všetky dostupné informácie sa zobrazia na úvodnom slajde.
