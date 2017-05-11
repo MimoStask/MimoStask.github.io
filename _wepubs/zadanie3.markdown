@@ -39,9 +39,25 @@ image_path:
 			</xs:complexType>
 		</xs:element>
 		{% endhighlight %}
-		
+{% endhighlight %}
 		
 		* ##### presentation 
 			* je koreňový element prezentácie. Obsahuje názov prezentácie **headline** a aj podnadpis **subHeadline**. Ďalej obsahuje podrobnejšie informácie o prezentácii a slajdy.
 		* ##### info
-			* obsahuje **author**, ktorý obsahuje meno a priezvisko autora. Autorov môže byť maximálne 4. Odporúča sa pri väčšom počte autorov ako štvrtého uviesť **a kolektív**.
+			* obsahuje **author**, ktorý obsahuje meno a priezvisko autora. Autorov môže byť maximálne 4. Odporúča sa pri väčšom počte autorov ako štvrtého uviesť **a kolektív**. Obsahuje **place**, tam môže používateľ zadať miesto konanie sa prezentácie. Má aj atribút hovoriaci o dátume prezentácie. Všetky dostupné informácie sa zobrazia na úvodnom slajde.
+		* ##### slide
+			* používateľ má na výber viacero druhov slajdov. 
+			```
+				<xs:element ref="bulletSlide"/>
+				<xs:element ref="numberedSlide"/>
+				<xs:element ref="imageSlide"/>
+				<xs:element ref="columnSlide"/>
+				<xs:element ref="themeSlide"/>
+				<xs:element ref="sourcesSlide"/>
+				<xs:element ref="endingSlide"/>
+			```
+			* **bulletSlide** je bežný odrážkový slajd. Obsahuje nadpis a odrážky v rozsahu 1 - 11. Veľkosť písma a riadkovania sa mení v závislosti od počtu odrážok. To isté platí aj pre číslované odrážky, ktoré sú k dizpozícii v **numberedSlide**. 
+			* **imageSlide** slúži n avloženie obrázku a jeho popisu. Umožňuje zadať aj rozmery obrázku. 
+			* **themeSlide** je slajd na uvedenie väčšieho celku alebo na ukázanie časti témy. Obsahuje nadpis a podnadpis. Podobný slajd je **endingSlide**, ktorý má naviac vo výslednom zobrazení pridaných autorov.
+			* **sourcesSlide** slúži na uvedenie bibliografie prezentácie.  
+			
