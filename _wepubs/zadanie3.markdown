@@ -27,23 +27,23 @@ image_path:
 * ### Opis typu dokumentu 
 	* Pre vytvorenie opisu typu dokumentu sme použili XML Schema. Zaujala nás jej väčšia vyjadrovacia sila oproti DTD. Taktiež jej jednoduchosť a prehľadnosť.
 	* #### Dôležité elementy
-		* {% highlight xml %}
-		<xs:element name="presentation">
-			<xs:complexType>
-				<xs:sequence>
-					<xs:element ref="headline"/>
-					<xs:element ref="subHeadline" minOccurs="0"/>
-					<xs:element ref="info"/>
-					<xs:element ref="slide" minOccurs="0" maxOccurs="unbounded"/>
-				</xs:sequence>
-			</xs:complexType>
-		</xs:element>
-		{% endhighlight %}
+		* 
+		```
+			<xs:element name="presentation">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="headline"/>
+						<xs:element ref="subHeadline" minOccurs="0"/>
+						<xs:element ref="info"/>
+						<xs:element ref="slide" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		 ```
+				
 		
-		
-		
-	* ##### presentation 
-			* je koreňový element prezentácie. Obsahuje názov prezentácie **headline** a aj podnadpis **subHeadline**. Ďalej obsahuje podrobnejšie informácie o prezentácii a slajdy.
+	* ##### presentation
+		* je koreňový element prezentácie. Obsahuje názov prezentácie **headline** a aj podnadpis **subHeadline**. Ďalej obsahuje podrobnejšie informácie o prezentácii a slajdy.
 		* ##### info
 			* obsahuje **author**, ktorý obsahuje meno a priezvisko autora. Autorov môže byť maximálne 4. Odporúča sa pri väčšom počte autorov ako štvrtého uviesť **a kolektív**. Obsahuje **place**, tam môže používateľ zadať miesto konanie sa prezentácie. Má aj atribút hovoriaci o dátume prezentácie. Všetky dostupné informácie sa zobrazia na úvodnom slajde.
 		* ##### slide
@@ -62,3 +62,57 @@ image_path:
 			* **themeSlide** je slajd na uvedenie väčšieho celku alebo na ukázanie časti témy. Obsahuje nadpis a podnadpis. Podobný slajd je **endingSlide**, ktorý má naviac vo výslednom zobrazení pridaných autorov.
 			* **sourcesSlide** slúži na uvedenie bibliografie prezentácie.  
 			
+* ### Ukážková prezentácia
+	* vytvorili sme ukážkovú prezentáciu. Obsahuje každý druh slajdu, ktorý je dostupný, rôzny počet odrážok na slajdoch, číslovaný slajd a aj slajd s dvoma stĺpcami. 
+* ### Návrh XSLT pre konverziu do XHTML + CSS
+	* podarilo sa nám vytvoriť transformáciu na XHTML. Aby sme mohli generovať slajdy do samostatných súborov sme použili verziu xslt 2.0. Na začiatku načítame parametre, ktoré určujú, či bude číslovanie na slajdoch a v akej forme a v akej farebnej schéme bude výsledná prezentácia. Vygeneruje sa úvodný slajd. Následne ak prezentácia obsahuje slajdy sa vygeneruje obsah prezentácie. Obsah obsahuje odkazy na slajdy a teda je možné sa priamo dostať na žiadaný slajd. 
+	```
+		<body>
+			<header>
+				<h1><xsl:value-of select="presentation/headline"/></h1>
+			</header>
+			<div class="title_page">
+				<div class="info">
+					<p class="meta_info"><xsl:value-of select="presentation/info/place"/><br/><xsl:value-of select="presentation/info/@dateOfPres"/></p>
+					<p class="authors">
+						<xsl:for-each select="presentation/info/author">
+								<xsl:value-of select="name"/>&#xA0;<xsl:value-of select="surname"/>,
+						</xsl:for-each>
+					</p>
+				</div>
+			</div>
+			<footer>
+				<xsl:if test="$page_num &gt; 0">
+					<a href="0.html" class="next_link">&gt;</a> 
+				</xsl:if>
+			</footer>
+		</body>
+	```
+	* následne v cykle for sa prejdú všetky slajdy, na ktoré sa aplikujú rozloženia (ag. template). 
+	* CSS súborov je definovaný priamo v XSL súbore z dôvodu zmeny na základe premených. Sme si vedomí, že by sa to dalo meniť aj priamo pri elementoch nastavovaním atribútov, ale radšej máme CSS na jednom mieste. Veľkosť textu odrážok a ich riadkovanie sa určuje pomocou predefinovaných tried v CSS. Pred vypísaním odrážok sa podľa ich počtu určí aká trieda bude priradená ich rodičovskému elemetu. Ukážku môžete vidieť nižšie. 
+	
+	```
+	<xsl:variable name="line_num" select="count(plainText)"/>
+		<xsl:attribute name="class">
+		  <xsl:choose>
+		        <xsl:when test="$line_num &gt; 8">
+		        	<xsl:value-of select="normalize-space('font_xsm')" />
+		        </xsl:when>
+		        <xsl:when test="$line_num &gt; 6">
+		        	<xsl:value-of select="normalize-space('font_sm')" />
+		        </xsl:when>
+		        <xsl:when test="$line_num &gt; 4">
+		        	<xsl:value-of select="normalize-space('font_md')" />
+		        </xsl:when>
+		        <xsl:otherwise>
+		        	<xsl:value-of select="normalize-space('font_lg')" />
+		        </xsl:otherwise>
+		    </xsl:choose>
+		</xsl:attribute>
+	```
+	
+	* v dolnej časti slajdu sa nachádzajú šípky slúžiace na navigáciu medzi slajdami. Pod nimi je voliteľné číslovanie strán. 
+
+* ###	Konverzia XML na PDF
+	* Z dôvodu časovej tiesene sme nestihli dokončiť XSLT transformáciu a preto ju neprezentujeme.
+
