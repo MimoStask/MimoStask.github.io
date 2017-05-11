@@ -27,7 +27,7 @@ image_path:
 * ### Opis typu dokumentu 
 	* Pre vytvorenie opisu typu dokumentu sme použili XML Schema. Zaujala nás jej väčšia vyjadrovacia sila oproti DTD. Taktiež jej jednoduchosť a prehľadnosť.
 	* #### Dôležité elementy
-		*{% highlight xsd %}
+		* {% highlight xsd %}
 		<xs:element name="presentation">
 			<xs:complexType>
 				<xs:sequence>
@@ -39,6 +39,7 @@ image_path:
 			</xs:complexType>
 		</xs:element>
 		{% endhighlight %}
+		
 		
 		* ##### presentation 
 			* je koreňový element prezentácie. Obsahuje názov prezentácie **headline** a aj podnadpis **subHeadline**. Ďalej obsahuje podrobnejšie informácie o prezentácii a slajdy.
