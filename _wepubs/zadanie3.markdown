@@ -39,7 +39,8 @@ image_path:
 			</xs:complexType>
 		</xs:element>
 		{% endhighlight %}
+		
 		* ##### presentation 
 			* je koreňový element prezentácie. Obsahuje názov prezentácie **headline** a aj podnadpis **subHeadline**. Ďalej obsahuje podrobnejšie informácie o prezentácii a slajdy.
 		* ##### info
-			*
+			* obsahuje **author**, ktorý obsahuje meno a priezvisko autora. Autorov môže byť maximálne 4. Odporúča sa pri väčšom počte autorov ako štvrtého uviesť **a kolektív**.
